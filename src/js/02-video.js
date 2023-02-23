@@ -12,11 +12,7 @@ if (localStorage.getItem(VIDEOCURTIME)) {
 
 player.on(
   'timeupdate',
-  Throttle(data => {
-    localStorage.setItem(VIDEOCURTIME, data.seconds);
-  }, 1000)
+  Throttle(data => ocalStorage.setItem(VIDEOCURTIME, data.seconds), 1000)
 );
 
-player.on('seeking', data => {
-  localStorage.setItem(VIDEOCURTIME, data.seconds);
-});
+player.on('seeking', data => localStorage.setItem(VIDEOCURTIME, data.seconds));
