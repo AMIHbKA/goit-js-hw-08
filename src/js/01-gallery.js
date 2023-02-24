@@ -20,7 +20,7 @@ const createGalleryItems = galleryItems =>
 const galleryItemsMarkup = createGalleryItems(galleryItems);
 galleryRef.innerHTML = galleryItemsMarkup;
 
-let gallery = new SimpleLightbox('.gallery a', {
+new SimpleLightbox('.gallery a', {
   captionSelector: 'img',
   captionsData: 'alt',
   captionPosition: 'bottom',
